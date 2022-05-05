@@ -11,6 +11,7 @@
 		1A0E56CA2823D2EE0046D8C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E56C92823D2EE0046D8C3 /* ContentView.swift */; };
 		1A0E56CC2823D2EF0046D8C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0E56CB2823D2EF0046D8C3 /* Assets.xcassets */; };
 		1A0E56CF2823D2EF0046D8C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0E56CE2823D2EF0046D8C3 /* Preview Assets.xcassets */; };
+		1A0E56D62823D34D0046D8C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0E56D52823D34D0046D8C3 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		1A0E56C92823D2EE0046D8C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A0E56CB2823D2EF0046D8C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A0E56CE2823D2EF0046D8C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A0E56D52823D34D0046D8C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A0E56D72823D3880046D8C3 /* swiftui-siri-intents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "swiftui-siri-intents.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +54,9 @@
 		1A0E56C62823D2EE0046D8C3 /* swiftui-siri-intents */ = {
 			isa = PBXGroup;
 			children = (
+				1A0E56D72823D3880046D8C3 /* swiftui-siri-intents.entitlements */,
 				1A0E56C72823D2EE0046D8C3 /* swiftui_siri_intentsApp.swift */,
+				1A0E56D52823D34D0046D8C3 /* AppDelegate.swift */,
 				1A0E56C92823D2EE0046D8C3 /* ContentView.swift */,
 				1A0E56CB2823D2EF0046D8C3 /* Assets.xcassets */,
 				1A0E56CD2823D2EF0046D8C3 /* Preview Content */,
@@ -137,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0E56D62823D34D0046D8C3 /* AppDelegate.swift in Sources */,
 				1A0E56CA2823D2EE0046D8C3 /* ContentView.swift in Sources */,
 				1A0E56C82823D2EE0046D8C3 /* swiftui_siri_intentsApp.swift in Sources */,
 			);
@@ -264,6 +270,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "swiftui-siri-intents/swiftui-siri-intents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftui-siri-intents/Preview Content\"";
@@ -293,6 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "swiftui-siri-intents/swiftui-siri-intents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftui-siri-intents/Preview Content\"";

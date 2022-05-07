@@ -1,8 +1,10 @@
 import SwiftUI
+import Intents
 
 struct ContentView: View {
-    @State var bgColor: Color = .red
     let colors: [Color] = [.red, .green, .blue]
+    
+    @State var bgColor: Color = .red
     
     var body: some View {
         VStack {
@@ -12,7 +14,7 @@ struct ContentView: View {
                 ForEach(colors, id: \.self) { color in
                     //TODO: Try to trigger these buttons with Siri shortcuts!
                     Button(color.description) {
-                        bgColor = color
+                        setBackground(color)
                     }
                     .background(.white)
                     .buttonStyle(.bordered)
@@ -28,6 +30,23 @@ struct ContentView: View {
         .foregroundColor(.white)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(bgColor)
+    }
+    
+    func setBackground(_ color: Color) {
+        print("ContentView.setBackground: color = \(color)")
+        let intent = SetBackgroundColorIntent()
+        //TODO: Need to convert Color to ColorEnum.
+        intent.color = ColorEnum.blue
+        let interaction = INInteraction(intent: intent, response: nil)
+        interaction.donate { error in
+            if let error = error {
+                print("error donating intent: \(String(describing: error))")
+            } else {
+                print("successfully donated intent")
+            }
+        }
+        
+        bgColor = color
     }
 }
 
